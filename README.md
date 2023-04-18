@@ -108,8 +108,98 @@ This becomes very useful skill when combined with variable arguments for Functio
 
 # Sets 
 Sets are a data type in python 3 that repersents am unordered grouping of distinct objects. With no duplicated elements.
-They are typically used to store and handle data, like a collection of singular items or a set of singular values. A set can not have duplicate elements and each element must be hashable by definition. Sets can be used by using the curly bracet or the built in set function.
+They are typically used to store and handle data, like a collection of singular items or a set of singular values. A set can not have duplicate elements and each element must be hashable by definition. Sets can be used by using the curly bracet or the built in set function. To define a set 
+example:
+# Set definition examples:
+example_set1 = {1, 2, 3}
+example_set2 = {'h','e','l','l','o'}
 
+print('example_set1:', example_set1)
+print('example_set2:', example_set2) # Notice there is only 1 'l'; Also notice the order of the values outputted
+print('--')
 
+singleton_set = {7}
+empty_set = set() # this is because {} is reversed for a different feature in python 3.
 
+print('Singleton:', singleton_set)
+print('Empty Set:', empty_set)
 
+One key operations with sets is membership:
+- A set has no duplicates
+-A set’s membership operation is one of the fastest operations compared to strings, lists, or tuples this will be covered more when we look at the concept of: complexity
+-By using membership operator, we can be certain a target exists or does not exist in our data
+Example of membership:
+example_set = set('hello')
+
+print("Membership of: \'h\'", 'h' in example_set)
+print("Non-Membership of: \'z\'", 'z' not in example_set)
+membership of h is = True Non-membership of z: True
+Because there is no ordure of sets there is no concept of indexing or slicing with a set but they are iterable
+##Dictionary in python 3:
+Dictionary is a data type that stores a collection of (key,value) pairs, such that each possible key appears at most once in the collection
+Common Operations:
+-Adding a Pair
+-Removing a pair
+-modifying an existing pair
+-lookup of a value associated with a key
+
+Python 3 Sets are mutable: Adding and Removing Values
+
+Sets are mutable; therefore, we can add and remove values
+There are also methods much lists that can affect the original sets as well
+
+#Powering Up sets:
+Sets can use vast operators to help us do complex calculations.
+Most of these operators will have a method counterpart because sets are mutable
+Our operators:
+Union
+Intersection
+Difference
+Symmetric Difference
+Proper Subset
+Subset
+Proper Superset
+Superset
+
+When two sets do not share a common value they are considered disjointed
+sets support Comprehension
+Sets aren’t sliceable nor indexable
+Sets cannot have sets inside them
+Sets do not have order; nor order of insertion
+Sets cannot guarantee that their values will be in order
+Sets do not record a value’s position
+
+#Defining Dictionary
+Like sets dictionary use {} but there item format is diffrent with each item in a dictionary be a pair of key: Value
+Dictionary example:
+# Dictionary Example
+sammy = {
+    'username': 'sammy',
+    'online': True,
+    'followers': 42
+}
+
+Dictionary properties:
+each item in dictionary is a key or value pair
+KEYS:
+keys are a unique address for dictionary values loctions
+they must be immutable
+unique therfore two keys cannot values exist in a single dictionary the newest created item with a duplicate KEY superceeds the previouse declaration
+
+Values:
+Vaues of a dictionary within a key can be any data type 
+Dictionary can modify existing values by referencing the key. We can add new values to dictionary by creating a new key. We can overwrite a value at an existing key by refrencing and recreating the value for it. We can also use deletions in dictionary we can empty the dictionary or delete the key, we can even delte the dictionar.
+We can use membership in dicctionary using in and not in operators to check if key exists.
+
+There are built-in functions interations with dictionaries
+
+Dictionary methods:
+Let A and B be a dictionary
+
+A.keys() –> Returns a sequence of keys/addresses in A
+A.values() –> Returns a sequence of item values in A
+A.items() –> Returns a sequence of key,item pairs in A
+A.get(address) –> Returns the item value at address
+A.update(B) –> Extends A with the dictionary of key,value pairs of B
+
+Dictionaries are iterable
